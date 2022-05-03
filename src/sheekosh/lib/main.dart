@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sheekosh/screens/edit_product_screen.dart';
-import 'package:sheekosh/screens/user_products_screen.dart';
 
+import '../screens/edit_product_screen.dart';
+import '../screens/user_products_screen.dart';
 import '../providers/cart_provider.dart';
 import '../providers/orders_provider.dart';
 import '../providers/products_provider.dart';
