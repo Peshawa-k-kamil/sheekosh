@@ -49,7 +49,7 @@ class BottomNav extends StatelessWidget {
             },
             child: const Icon(
               Icons.account_box_outlined,
-              //color: Colors.white,
+              color: Colors.white,
               size: 35,
             ),
           ),
@@ -58,11 +58,12 @@ class BottomNav extends StatelessWidget {
             child: const Icon(
               Icons.shopping_cart_outlined,
               size: 35,
+              color: Colors.white,
             ),
           ),
           const Icon(
             Icons.home,
-            //color: Colors.white,
+            color: Colors.white,
             size: 35,
           ),
         ],
