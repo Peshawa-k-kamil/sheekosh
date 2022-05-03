@@ -19,8 +19,9 @@ class RecomendedProdsGrid extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       itemCount: products.length,
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 250,
-        mainAxisExtent: 250,
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 10 / 9,
+        mainAxisExtent: 200,
         crossAxisSpacing: 10,
       ),
       itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
