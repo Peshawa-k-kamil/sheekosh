@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sheekosh/providers/products_provider.dart';
+import 'package:sheekosh/ui/widgets/home/search.dart';
 import 'package:sheekosh/ui/widgets/shared/bottom_nav.dart';
 
 import '../../providers/cart_provider.dart';
 import '../../screens/cart_screen.dart';
 import '../../widgets/app_drawer.dart';
 import '../../widgets/badge.dart';
-import '../../widgets/products_grid.dart';
+import '../widgets/home/recomended_prods_grid.dart';
 
 enum FilterOptions { favorites, all }
 
@@ -56,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ? const Center(
               child: CircularProgressIndicator(),
             )
-          : ProductsGrid(_showOnlyFavorites),
+          : RecomendedProdsGrid(_showOnlyFavorites),
       bottomNavigationBar: const BottomNav(),
     );
   }
@@ -122,7 +123,21 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               flex: 3,
               child: Container(
-                color: Colors.green,
+                //color: Colors.green,
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Search(),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
