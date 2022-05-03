@@ -58,7 +58,29 @@ class _HomeScreenState extends State<HomeScreen> {
           ? const Center(
               child: CircularProgressIndicator(),
             )
-          : RecomendedProdsGrid(_showOnlyFavorites),
+          : Column(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    color: Colors.blue,
+                  ),
+                ),
+                const Expanded(
+                  flex: 1,
+                  child: Text(
+                    'کاڵای پێشنیار کراو',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 20,
+                  child: RecomendedProdsGrid(_showOnlyFavorites),
+                ),
+              ],
+            ),
       bottomNavigationBar: const BottomNav(),
     );
   }
